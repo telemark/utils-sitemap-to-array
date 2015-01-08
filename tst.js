@@ -10,9 +10,7 @@ function handleResponse(err, result){
   if(err){
     console.error(err);
   } else {
-    result.urlset.forEach(function(item){
-      console.log(item);
-    });
+      console.log(result);
   }
 }
 
