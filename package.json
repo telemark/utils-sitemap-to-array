@@ -1,0 +1,30 @@
+{
+  "name": "utils-sitemap-to-array",
+  "version": "1.0.0",
+  "private": true,
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha --reporter spec test/*.js"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/telemark/utils-sitemap-to-array.git"
+  },
+  "bugs": {
+    "url": "http://github.com/telemark/utils-sitemap-to-array/issues"
+  },
+  "dependencies": {
+    "xml2js": "^0.4.4"
+  },
+  "devDependencies": {
+    "mocha": "^2.1.0"
+  }
+}
