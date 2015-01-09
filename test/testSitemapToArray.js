@@ -1,7 +1,9 @@
 'use strict';
 
 var assert = require('assert')
-  , sitemapToArray = require('../index');
+  , fs = require('fs')
+  , sitemapToArray = require('../index')
+  , siteMap = fs.readFileSync('test/sitemap.xml', 'utf-8').toString()
 ;
 
 describe('sitemapToArray', function(){
@@ -20,6 +22,34 @@ describe('sitemapToArray', function(){
         },
         "Unexpected error"
       );
+      done();
+    });
+
+  });
+
+  it('returns an array', function(done){
+
+    var data = siteMap;
+
+    sitemapToArray(data, function(err, arr){
+      if(err) throw err;
+
+      assert.equal(arr[0].loc, 'http://www.telemark.no/Vaare-tjenester');
+
+      done();
+    });
+
+  });
+
+  it('returns an array with unwrapped objects', function(done){
+
+    var data = siteMap;
+
+    sitemapToArray(data, function(err, arr){
+      if(err) throw err;
+
+      assert.equal(arr[0].loc, 'http://www.telemark.no/Vaare-tjenester');
+
       done();
     });
 
