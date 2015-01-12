@@ -41,4 +41,19 @@ http.get(sitemapUrl, function(res) {
 }).on('error', function(e) {
   console.error(e);
 });
+``
+
+Return example.
+
+```
+[ { loc: 'http://www.telemark.no/Vaare-tjenester',
+    lastmod: '2012-11-26T06:24:29+00:00' },
+  { loc: 'http://www.telemark.no/Vaare-tjenester/Kurs-og-konferanser',
+    lastmod: '2014-10-06T11:40:22+00:00' },
+  { loc: 'http://www.telemark.no/Vaare-tjenester/Folkehelse',
+    lastmod: '2014-11-07T08:34:38+00:00' },
+  { loc: '\n            http://www.telemark.no/Vaare-tjenester/Folkehelse/Tilbud-HEFRES/Aktivitetsdager-Uten-grenser-der-ALT-er-mulig\n        ',
+    lastmod: '2014-09-16T07:16:03+00:00' },
+  { loc: 'http://www.telemark.no/Aktuelt/Verdensarvsoeknaden-paa-vei-til-Unesco',
+    lastmod: '2014-02-28T12:10:42+00:00' } ]
 ```
