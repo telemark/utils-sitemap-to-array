@@ -1,13 +1,13 @@
 'use strict';
 
-var http = require('http')
-  , smta = require('./index')
-  , sitemapUrl = 'http://www.telemark.no/sitemap.xml'
-  , body = ''
-  ;
+var http = require('http');
+var smta = require('./index');
+var sitemapUrl = 'http://www.telemark.no/sitemap.xml';
+var body = '';
+
 
 function handleResponse(err, result){
-  if(err){
+  if (err) {
     console.error(err);
   } else {
     console.log(result);
@@ -15,12 +15,15 @@ function handleResponse(err, result){
 }
 
 http.get(sitemapUrl, function(res) {
+
   res.on('data', function(buf){
     body += buf.toString();
   });
+
   res.on('end', function(){
-    smta(body, handleResponse);;
+    smta(body, handleResponse);
   });
+
 }).on('error', function(e) {
   console.error(e);
 });
