@@ -1,5 +1,5 @@
 #utils-sitemap-to-array
-Module for converting Sitemap.xml to array of objects [![Build Status](https://travis-ci.org/telemark/utils-sitemap-to-array.svg?branch=master)](https://travis-ci.org/telemark/utils-sitemap-to-array) [![Coverage Status](https://coveralls.io/repos/telemark/utils-sitemap-to-array/badge.svg)](https://coveralls.io/r/telemark/utils-sitemap-to-array)
+Module for converting Sitemap.xml to array of objects [![Build Status](https://travis-ci.org/telemark/utils-sitemap-to-array.svg?branch=master)](https://travis-ci.org/telemark/utils-sitemap-to-array) [![Coverage Status](https://coveralls.io/repos/telemark/utils-sitemap-to-array/badge.svg?branch=master)](https://coveralls.io/r/telemark/utils-sitemap-to-array?branch=master)
 
 ##Installation
 ```
