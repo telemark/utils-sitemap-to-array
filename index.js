@@ -34,11 +34,7 @@ function sitemapToArray(data, callback) {
   }
 
   parser.parseString(data, function(err, result) {
-    if (err) {
-      return callback(err, null);
-    } else {
-      return callback(null, result.urlset.url.map(unWrap));
-    }
+    return err ? callback(err, null) : callback(null, result.urlset.url.map(unWrap));
   });
 
 }
