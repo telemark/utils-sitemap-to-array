@@ -9,7 +9,8 @@
   },
   "main": "index.js",
   "scripts": {
-    "test": "mocha --reporter spec test/*.js"
+    "test": "mocha --reporter spec test/*.js",
+    "coverage": "istanbul cover -x 'test/*.js' _mocha -- --reporter spec --timeout 4000"
   },
   "engines": {
     "node": ">=0.10.0"
