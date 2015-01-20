@@ -41,7 +41,7 @@ http.get(sitemapUrl, function(res) {
 }).on('error', function(e) {
   console.error(e);
 });
-``
+```
 
 Return example.
 
