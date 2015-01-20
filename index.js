@@ -9,16 +9,15 @@ var parser = new xml2js.Parser();
  * @param {object} item - The object from
  * @returns {object} newItem - The unwrapped item
  */
-function unWrap(item){
+function unWrap(item) {
   var newItem = {};
 
-  Object.keys(item).forEach(function(prop){
+  Object.keys(item).forEach(function(prop) {
     newItem[prop] = item[prop][0];
   });
 
   return newItem;
 }
-
 
 /**
  * sitemapToArray
@@ -29,12 +28,12 @@ function unWrap(item){
  * @param {callback} callback - The callback for handling the response
  * @returns {object}
  */
-function sitemapToArray(data, callback){
+function sitemapToArray(data, callback) {
   if (!data) {
     return callback(new Error('Missing required input: data'), null);
   }
 
-  parser.parseString(data, function (err, result) {
+  parser.parseString(data, function(err, result) {
     if (err) {
       return callback(err, null);
     } else {

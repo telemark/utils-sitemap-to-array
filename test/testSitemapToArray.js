@@ -5,21 +5,21 @@ var fs = require('fs');
 var sitemapToArray = require('../index');
 var siteMap = fs.readFileSync('test/sitemap.xml', 'utf-8').toString();
 
-describe('sitemapToArray', function(){
+describe('sitemapToArray', function() {
 
-  it('requires data', function(done){
+  it('requires data', function(done) {
 
     var data = false;
 
-    sitemapToArray(data, function(err, arr){
-      assert.throws(function(){
+    sitemapToArray(data, function(err, arr) {
+      assert.throws(function() {
           if (err) {
             throw err;
           } else {
             console.log(arr);
           }
-        }, function(err){
-          if((err instanceof Error) && /Missing required input: data/.test(err)){
+        }, function(err) {
+          if ((err instanceof Error) && /Missing required input: data/.test(err)) {
             return true;
           }
         },
@@ -30,11 +30,8 @@ describe('sitemapToArray', function(){
 
   });
 
-  it('returns an array', function(done){
-
-    var data = siteMap;
-
-    sitemapToArray(data, function(err, arr){
+  it('returns an array', function(done) {
+    sitemapToArray(siteMap, function(err, arr) {
       if (err) {
         throw err;
       }
@@ -46,11 +43,8 @@ describe('sitemapToArray', function(){
 
   });
 
-  it('returns an array with unwrapped objects', function(done){
-
-    var data = siteMap;
-
-    sitemapToArray(data, function(err, arr){
+  it('returns an array with unwrapped objects', function(done) {
+    sitemapToArray(siteMap, function(err, arr) {
       if (err) {
         throw err;
       }
